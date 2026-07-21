@@ -26,18 +26,5 @@ scripts/      — разовые скрипты импорта данных из
 deploy/       — systemd unit и инструкция по разворачиванию на сервере
 ```
 
-## Запуск локально
-
-```bash
-python -m venv venv
-venv/bin/activate       # или venv\Scripts\activate на Windows
-pip install -r requirements.txt
-cp .env.example .env    # и подставить реальный BOT_TOKEN / ALLOWED_USER_IDS
-python main.py
-```
-
 База данных `database/inventory.db` создаётся автоматически при первом запуске (см. `database/schema.sql`), изначально пустая — товары добавляются через сценарий инвентаризации в самом боте либо скриптами импорта в `scripts/`.
 
-## Разворачивание на сервере
-
-См. `deploy/DEPLOY.md` — пошаговая инструкция для Ubuntu + systemd (автозапуск, автоперезапуск при падении).
