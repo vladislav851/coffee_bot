@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Database (реальные данные склада/кофейни заказчика)
+database/*.db
+database/*.db-journal
+database/*.db-wal
+database/*.db-shm
+
+# Python
+__pycache__/
+*.pyc
+venv/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db

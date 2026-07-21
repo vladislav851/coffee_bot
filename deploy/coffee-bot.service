@@ -1,0 +1,15 @@
+[Unit]
+Description=Coffee Bot (Telegram) - inventory tracking
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=botuser
+WorkingDirectory=/home/botuser/coffee_bot
+ExecStart=/home/botuser/coffee_bot/venv/bin/python main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
